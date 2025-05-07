@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KAWACONNECT - Supply Crop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .header h1 {
+      color: #006A06;
+      font-weight: bold;
+    }
+
+    .logout {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .form-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .btn-supply {
+      background-color: #006A06;
+      color: white;
+      font-size: 18px;
+      padding: 10px 25px;
+      border: none;
+    }
+
+    .btn-supply:hover {
+      background-color: #004d04;
+    }
+
+    footer {
+      background-color: #00000c;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header position-relative">
+    <h1>KAWACONNECT</h1>
+    <small>Sell your coffee Without Leaving Home</small>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark mt-3">
+    <div class="container-fluid px-4">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     <div class="logout">
+      <a href="index.html" class="logout text-white text-decoration-underline">Logout</a>
+    </div>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="fdash.html" class="nav-link">My Profile</a></li>
+        <li class="nav-item"><a href="supply.html" class="nav-link">Supply Crop</a></li>
+        <li class="nav-item"><a href="supplied.html" class="nav-link">Crop Supplied</a></li>
+        <li class="nav-item"><a href="notification.html" class="nav-link">Notification</a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <div class="container my-5 flex-grow-1 d-flex justify-content-center">
+    <form class="form-box w-100" style="max-width: 500px;" id="supplyform">
+      <div class="mb-3">
+        <label for="coffeeType" class="form-label">Coffee Type</label>
+        <input type="text" class="form-control" id="coffeeType" required />
+      </div>
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="quantity" required />
+      </div>
+      <div class="mb-3">
+        <label for="harvestDate" class="form-label">Harvest Date</label>
+        <input type="date" class="form-control" id="harvestDate" required />
+      </div>
+      <div class="mb-3">
+        <label for="qualityGrade" class="form-label">Quality Grade</label>
+        <input type="text" class="form-control" id="qualityGrade" required />
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-supply">Supply</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer py-2 mt-auto">
+    <div class="container d-flex flex-column flex-md-row justify-content-center gap-4 text-center">
+      <a href="https://www.facebook.com/treassysissy.umwiza" target="_blank" class="d-flex align-items-center gap-2 justify-content-center">
+        <i class="bi bi-facebook fs-4"></i> <span>Facebook</span>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="d-flex align-items-center gap-2 justify-content-center">
+        <i class="bi bi-twitter-x fs-4"></i> <span>Twitter-X</span>
+      </a>
+      <a href="https://www.instagram.com/mugisha_floxy?igsh=NGJzeHM1eDlkejEy" target="_blank" class="d-flex align-items-center gap-2 justify-content-center">
+        <i class="bi bi-instagram fs-4"></i> <span>Instagram</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('supplyform').addEventListener('submit', function (e) {
+      e.preventDefault(); 
+      alert("Your crop has been supplied successfully!");
+      this.reset(); 
+    });
+  </script>
+
+</body>
+</html>

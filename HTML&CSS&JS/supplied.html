@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KAWACONNECT - Crop Supplied</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header h1 {
+      color: #066A06;
+      font-weight: bold;
+    }
+
+    .header small {
+      color: #666;
+    }
+
+    .logout {
+      color: black;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-left: auto;
+    }
+
+    .table-box {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 30px;
+      margin: 30px auto;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .btn-print {
+      background-color: #066A06;
+      color: white;
+      border: none;
+      padding: 8px 30px;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .btn-print:hover {
+      background-color: darkgreen;
+    }
+
+    .status-paid { color: green; font-weight: bold; }
+    .status-denied { color: red; font-weight: bold; }
+    .status-accepted { color: darkblue; font-weight: bold; }
+    .status-pending { color: orange; font-weight: bold; }
+
+    footer {
+      background-color: #00000c;
+      color: white;
+      margin-top: auto;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 576px) {
+      .table-box {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="header text-center mt-3">
+    <h1>KAWACONNECT</h1>
+    <small>Sell your coffee Without Leaving Home</small>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark mt-3">
+    <div class="container-fluid px-4">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     <div class="logout">
+      <a href="index.html" class="logout text-white text-decoration-underline">Logout</a>
+    </div>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="fdash.html" class="nav-link">My Profile</a></li>
+        <li class="nav-item"><a href="supply.html" class="nav-link">Supply Crop</a></li>
+        <li class="nav-item"><a href="supplied.html" class="nav-link">Crop Supplied</a></li>
+        <li class="nav-item"><a href="notification.html" class="nav-link">Notification</a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+  <div class="container-fluids px-3 px-md-5 mt-4">
+    <div class="table-box shadow p-4 bg-white rounded-4">
+      <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>Harvest Date</th>
+              <th>Coffee Type</th>
+              <th>Quantity (Kg)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>06/01/2025</td>
+              <td>Arabica</td>
+              <td>120</td>
+              <td class="status-paid">paid</td>
+            </tr>
+            <tr>
+              <td>04/02/2025</td>
+              <td>Arabica</td>
+              <td>120</td>
+              <td class="status-paid">paid</td>
+            </tr>
+            <tr>
+              <td>25/03/2025</td>
+              <td>Arabica</td>
+              <td>120</td>
+              <td class="status-denied">Denied</td>
+            </tr>
+            <tr>
+              <td>10/04/2025</td>
+              <td>Arabica</td>
+              <td>120</td>
+              <td class="status-accepted">Accepted</td>
+            </tr>
+            <tr>
+              <td>15/04/2025</td>
+              <td>Arabica</td>
+              <td>120</td>
+              <td class="status-pending">pending</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center mt-3">
+        <button class="btn-print" onclick="window.print()">Print</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer py-2 mt-auto">
+    <div class="container d-flex justify-content-center gap-4 flex-wrap">
+      <a href="https://www.facebook.com/treassysissy.umwiza" target="_blank" class="d-flex align-items-center gap-2">
+        <i class="bi bi-facebook fs-4"></i> <span>Facebook</span>
+      </a>
+      <a href="https://twitter.com" target="_blank" class="d-flex align-items-center gap-2">
+        <i class="bi bi-twitter-x fs-4"></i> <span>Twitter-X</span>
+      </a>
+      <a href="https://www.instagram.com/mugisha_floxy?igsh=NGJzeHM1eDlkejEy" target="_blank" class="d-flex align-items-center gap-2">
+        <i class="bi bi-instagram fs-4"></i> <span>Instagram</span>
+      </a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
